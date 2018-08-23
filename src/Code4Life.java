@@ -3,7 +3,7 @@
  *    Copyright (c) The League of Amazing Programmers 2013-2017
  *    Level 0
  */
-
+import javax.swing.JOptionPane;
 import java.applet.AudioClip;
 import java.io.File;
 import javax.sound.sampled.AudioInputStream;
@@ -12,7 +12,20 @@ import javax.sound.sampled.Clip;
 import javax.swing.JApplet;
 
 public class Code4Life {
+public static void main(String[] args) {
+	
 
+	String streeg=JOptionPane.showInputDialog("How many hours did you spend this coding this week?");
+	int num=Integer.parseInt(streeg);
+	
+	if(num<3) {
+		JOptionPane.showMessageDialog(null, "stop watching youtube and write some code");
+	}else if(num<6) {
+		JOptionPane.showMessageDialog(null, "String youare = a coding ninja");
+	}else {
+		playBatmanTheme();		
+	}
+}
 	// 1. Ask the user how many hours they spent coding this week.
 
 	// 2. If it is less than or equal to 2, tell them to stop watching YouTube and

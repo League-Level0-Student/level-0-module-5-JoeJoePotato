@@ -24,7 +24,7 @@ JOptionPane.showMessageDialog(null, "You have "+(bleh*10)+" cents worth of dimes
 
 
 		// Tell them how many cents they have (hint multiply by 10)
-String skillllllz=JOptionPane.showInputDialog("How tall are you(enter as a number)");
+String skillllllz=JOptionPane.showInputDialog("How tall are you in inches(enter as a number)");
 int bleeh=Integer.parseInt(skillllllz);
 if(bleh>36) {
 	JOptionPane.showMessageDialog(null, "I am Gandalf, you must embark on my quest to kill smaug!");
@@ -62,8 +62,10 @@ for (int i = 1; i < 31; i++) {
 		void skill3() { // Get a random number that is less than 20 and print it to the console 
 
 Random gen=new Random();
-int x=gen.nextInt(21);
-int y=gen.nextInt(11);
+int x=gen.nextInt(20);
+int y=gen.nextInt(10);
+System.out.println(x);
+System.out.println(y);
 		// Get another random number that is less than 10 and print it to the console 
 JOptionPane.showMessageDialog(null, "the difference is "+(x-y));
 
@@ -77,9 +79,14 @@ JOptionPane.showMessageDialog(null, "the difference is "+(x-y));
 		void skill4() { // In a pop-up, ask the user for the city they live in 
 
 
-String city=JOptionPane.showInputDialog("what city do you live in");
+String city=JOptionPane.showInputDialog("what city do you live in? No caps please.");
 		// If they answered "San Diego", tell them they live in America's Finest City 
+if(city.equals("san diego")) {
+	JOptionPane.showMessageDialog(null, "You live in the finest city in America.");
+}else {
+	JOptionPane.showMessageDialog(null, "Move from "+city+" to San Diego");
 
+}
 
 
 		// Otherwise, tell them to move to San Diego 
@@ -101,8 +108,8 @@ String city=JOptionPane.showInputDialog("what city do you live in");
 		}
 
 		void skill5() { // In a pop-up, ask the user for the name of their school 
-
-
+			String scol=JOptionPane.showInputDialog("what school do you go to?");
+JOptionPane.showMessageDialog(null, "Good choice, "+scol+" is a great school.");
 
 		// In another pop-up, tell the user, that their school is a fantastic school. // You must include the name of the school in the message. 
 
